@@ -1,0 +1,388 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<link rel="stylesheet" href="{% static '../static/css/main.css' %}" />
+        <link rel="stylesheet" href="{% static '../static/css/custom-written.css' %}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <title>Coronavirus Updates Pakistan COVID-19 Live Cases Stats</title>
+		<meta charset="utf-8" />
+        <meta name="keywords" content="Coronavirus, Coronavirus update, Coronavirus Pakistan, Coronavirus live, coronavirus total cases, coronavirus stats, COVID-19, Coronavirus New Cases,COVID Pakistan, Pak Result" />
+		<meta name="description" content="Live Coronavirus updates are available for Pakistan and all of the world. Check COVID-19 statistics including Total Cases, New cases reported Live in each country, Total Deaths, New Deaths, Total Recovered, Active Cases, Serious, Critical, Total Cases per Million etc. Other details are death rate, incubation, age, symptoms, opinions, news in Pakistan and other countries of the world." />
+		<meta property="og:site_name" content="Pakresult.com">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Coronavirus Updates Pakistan COVID-19 Live Cases Stats">
+        <meta property="og:description" content="Live Coronavirus updates are available for Pakistan and all of the world. Check COVID-19 statistics including Total Cases, New cases reported Live in each country, Total Deaths, New Deaths, Total Recovered, Active Cases, Serious, Critical, Total Cases per Million etc. Other details are death rate, incubation, age, symptoms, opinions, news in Pakistan and other countries of the world.">
+        <meta property="og:site_name" content="PakResult.com">
+        <meta property="article:tag" content="Coronavirus">
+        <meta property="article:tag" content="Coronavirus update">
+        <meta property="article:tag" content="Coronavirus Pakistan">
+        <meta property="article:tag" content="coronavirus Total cases">
+        <meta property="article:tag" content="COVID-19">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:description" content="Live Coronavirus updates are available for Pakistan and all of the world. Check COVID-19 statistics including Total Cases, New cases reported Live in each country, Total Deaths, New Deaths, Total Recovered, Active Cases, Serious, Critical, Total Cases per Million etc. Other details are death rate, incubation, age, symptoms, opinions, news in Pakistan and other countries of the world.">
+        <meta name="twitter:title" content="Coronavirus Updates Pakistan COVID-19 Live Cases Stats">
+    </head>
+
+    <style>html {
+  scroll-behavior: smooth;
+}
+
+    </style>
+    <style>
+	#corona-table{
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+	}
+	#corona-table tr{
+	}
+	#corona-table tr td{
+		border: 1px solid #ccc;
+		padding: 5px;
+        color: #F0F9E2;
+	}
+	#clone thead th, #corona-table thead th{
+		text-align: left;
+		border: 1px solid #ccc;
+		background-color: #3D3D3D;
+		padding: 2px;
+		color: white;
+		font-weight: bold;
+        text-align: center;
+	}
+
+	#corona-table1{
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+        color: #F0F9E2;
+	}
+	#corona-table1 tr{
+	}
+	#corona-table1 tr td{
+		border: 1px solid #ccc;
+		padding: 5px;
+	}
+	#clone thead th, #corona-table1 thead th{
+		text-align: left;
+		border: 1px solid #ccc;
+		background-color: #3D3D3D;
+		padding: 5px;
+		color: white;
+		font-weight: bold;
+        text-align: center;
+	}
+
+
+	#clone{
+		width: 100%;
+		-webkit-transition: all 1s ease-out;
+		-moz-transition: all 1s ease-out;
+		-o-transition: all 1s ease-out;
+		transition: all 1s ease-out;
+	}
+	.new_deaths{
+		background-color: #E10303;
+		color: white;
+	}
+	.new_cases{
+		background-color: darkred;
+	}
+	.recovered{
+		background-color: darkgreen;
+	}
+	.recovered_w_deaths{
+		background-color: #F1F1F1;
+	}
+	.corona_urdu .head1{
+		font-size: 30px;
+		margin-bottom: 15px;
+	}
+	.corona_urdu .head2{
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+	.corona_urdu ol{
+		list-style-position: outside;
+		color: #444;
+	}
+	.corona_urdu ol li{
+		margin-right: 20px;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.corona_eng .corona_head1{
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	.corona_eng .corona_head2{
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	.corona_eng ol{
+		list-style-position: outside;
+		color: #444;
+	}
+	.corona_eng ol li{
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+	.total_head {
+		background-color: #eee;
+		font-size: 18px;
+		margin-bottom: 10px;
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding: 5px;
+	}
+	.top_cont p{
+	   text-align: center;
+	   color: #444;
+	   margin-bottom: 25px;
+	}
+	.two_boxes{
+		float: left;
+		width: 100%;
+		padding: 10px 0;
+	}
+	.box1, .box2{
+		float: left;
+		width: 48%;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+        background: rgb(241,241,241);
+background: linear-gradient(0deg, rgba(241,241,241,1) 0%, rgba(241,241,241,1) 35%, rgba(231,150,150,1) 100%);
+	}
+	.box1{
+		margin-right: 2%;
+	}
+	.box2{
+		margin-left: 2%;
+	}
+
+	.box_main_h{
+		text-align: center;
+		margin: 15px;
+	}
+	.inner_div{
+		float: left;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.inner1, .inner2{
+		float: left;
+		width: 50%;
+	}
+
+	.box_in_h{
+		background-color: #eee;
+		padding: 10px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.inner_div{
+	}
+	.big_spn{
+		font-size: 24px;
+	}
+	.spn_txt{
+		font-size: 12px;
+	}
+	@media screen and (max-width: 480px) {
+		.box1, .box2{
+			width: 100%;
+			margin: 0;
+			margin-bottom: 20px;
+		}
+		#corona-table{
+			font-size: 12px;
+			overflow: scroll; /* Scrollbar are always visible */
+			overflow: auto;
+		}
+
+	}
+        hr.new1 {
+  border-top: 1px dashed gray;
+}
+
+</style>
+
+<body class="is-preload">
+
+	<!-- Header -->
+		<header id="header">
+               <a class="logo" href="https://www.pakresult.com/" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com </a>
+               <nav>
+                   <a href="#menu" style="font-size: 18px">Menu</a>
+               </nav>
+           </header>
+
+	<!-- Nav -->
+        {% include "navbar.html" %}
+
+	<!-- Banner -->
+		<!-- Header -->
+		<div id="heading">
+				<h1 class="icon fa-medkit" style="font-family: serif"> Coronavirus Live Updates </h1>
+            
+			</div>
+
+
+	<!-- Highlights -->
+		<section class="wrapper">
+            
+            <div class="inner" style="text-align: center"><h2><a class="fa fa-compass"></a> Navigation</h2><hr class="new1">
+               <a class="button primary" href="#pakistan" style="font-size: 25px">Pakistan COVID Stats</a><br><br>
+                <a class="button" href="#global" style="font-size: 25px">WorldWide COVID Stats</a><br><br>
+                <a class="button primary" href="#prevention" style="font-size: 25px">Prevention</a><br><br>
+                <a class="button" href="#symptoms" style="font-size: 25px">Symptoms</a>
+                </div>
+	
+    
+    
+    
+    
+    
+      <!--pakistani Stats-->
+        <section class="wrapper" id="pakistan" style="height: 105vh">
+            <div class="inner">
+                    <div class="content">
+                        <hr><h1>Coronavirus Cases In Pakistan</h1><hr>
+                        {{ pak_stats|safe }}
+                        </div>
+            </div>
+          
+        </section>
+
+	<!-- CTA -->
+		<section id="cta" class="wrapper" style="z-index: -10">
+            <div class="inner">
+		    {{ pak_table|safe }}
+            </div><h3>PakResult.com</h3>
+	</section>
+</section>
+
+    
+    
+    
+    
+    <!--Global Stats-->
+    <section class="wrapper" id="global">
+            <div class="inner">
+                    <div class="content">
+                        <hr><h1>CORONAVIRUS CASES WorldWide</h1><hr>
+                        {{ global_stats|safe }}
+                        </div>
+            </div>
+                </section>
+	<!-- CTA -->
+		<section id="cta" class="wrapper">
+			<div class="inner" style="overflow-x:auto; border: 1px solid white">
+				{{ global_table|safe }}
+            </div><h3>PakResult.com</h3>
+	</section><br><br>
+    
+    
+    <div class="inner">
+     <header class="special">
+                    <hr id="prevention">
+                    <h2 style="text-align: center">Prevention | روک تھام</h2><hr>
+                    <div style="text-align: center">
+                        
+                        <div class="corona_eng"> 
+                            <div class="corona_head2"><h3><b>Information regarding Coronavirus</b></h3></div>
+                            <ol  style="text-align: justify">
+                                <li>2019 Novel Coronavirus (2019-nCoV) is considered a Coronavirus, which causes the spreading of the respiratory illness among the people and it was first detected in Wuhan, city of China. </li>
+                                <li>Initially when the patients caught this disease in Wuhan, China, it was considered that this disease caused by seafood and animal market and it was said that this disease was spreading from animal to person. </li>
+                                <li>After some time, it was noticed that large number of patients do not have any connection with animal market and it indicated that this disease was spreading from person to person. </li>
+                                <li>This information is taken after summarizing CDC and you can also find more info from here.</li>
+                            </ol>
+                        </div>
+                        
+                        <div id="prevention" class="corona_urdu" dir="rtl">
+                            <div><h3><b>کرونا وائرس کیا ہے؟</b></h3></div>
+                            <ol  style="text-align: justify">
+                                <li>2019 نول کروناوائرس (2019 – این کو وی) ایک وائرس ہے  جو اس  وجہ سے مشہور ہے  کہ اس کی وجہ سے  سانس کا مرض پھیلتا ہےجس کے بارے میں سب سے پہلے ووہان چین میں پتہ چلا۔</li>
+                
+                                <li>ابتدائی طورپرچین کے شہر ووہان میں بہت سے مریضوں میں یہ  مرض  پھیلا جن کا مبینہ  طور پر سمندری غذا اور جانوروں کی بڑی منڈی سے تعلق تھا جس سے یہ تجویز کیا گیا  کہ یہ بیماری  جانوروں سے انسانوں میں پھیلی۔</li>
+                                <li>تا ہم مریضوں  کی بڑھتی ہوئی تعداد کا  جانوروں کی منڈیوں سے  تعلق نہیں تھا جس سے یہ ظاہر ہوتا ہے کہ یہ ایک شخص سے دوسرے شخص تک پھیل رہا ہے۔ </li>
+                            </ol>
+                        </div>
+                        
+                    </div>
+                   <br><br><br>
+                    <hr id="symptoms">
+                    <h2 style="text-align: center">Symptoms | روک تھام</h2><hr>
+                    <div style="text-align: center">
+                        
+                        <div class="corona_eng">
+                            <div class="corona_head1"><h3><b>Symptoms of Coronavirus</b></h3></div>
+                            <ol style="text-align: justify">
+                                <li>Fever</li>
+                                <li>Cough</li>
+                                <li>Shortness of breath</li>
+                                <li>Flu like symptoms</li>
+                                <li>After exposure of Coronavirus, the symptoms of this disease may appear in 2 to 14 days. If you have been in Coronavirus affected area recently and develop some symptoms, call your doctor.</li>
+    
+                            </ol>
+                        </div>
+                          
+                        <div id="prevention" class="corona_urdu" dir="rtl">
+                            <div><h3><b>کرونا وائرس کیا ہے؟</b></h3></div>
+                            <ol>
+                                <li>2019 نول کروناوائرس (2019 – این کو وی) ایک وائرس ہے  جو اس  وجہ سے مشہور ہے  کہ اس کی وجہ سے  سانس کا مرض پھیلتا ہےجس کے بارے میں سب سے پہلے ووہان چین میں پتہ چلا۔</li>
+                
+                                <li>ابتدائی طورپرچین کے شہر ووہان میں بہت سے مریضوں میں یہ  مرض  پھیلا جن کا مبینہ  طور پر سمندری غذا اور جانوروں کی بڑی منڈی سے تعلق تھا جس سے یہ تجویز کیا گیا  کہ یہ بیماری  جانوروں سے انسانوں میں پھیلی۔</li>
+                                <li>تا ہم مریضوں  کی بڑھتی ہوئی تعداد کا  جانوروں کی منڈیوں سے  تعلق نہیں تھا جس سے یہ ظاہر ہوتا ہے کہ یہ ایک شخص سے دوسرے شخص تک پھیل رہا ہے۔ </li>
+                            </ol>
+                        </div>
+                        
+                    </div><hr><h3>PakResult.com</h3><br>
+                    
+                    
+                    
+                </header></div>
+            	</section>
+	<!-- Footer -->
+    {% include "footer.html" %}
+	<!-- Scripts -->
+
+
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/browser.min.js" %}"></script>
+		<script src="{% static "js/breakpoints.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+
+</body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>

@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	<link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<title>About Us</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+	</head>
+    
+    
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+               <a class="logo" href="/home" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com</a>
+			
+				<nav>
+					<a href="#menu" style="font-size: 18px">Menu</a>
+				</nav>
+			</header>
+
+        
+        
+		<!-- Nav -->
+		 {% include "navbar.html" %}
+        
+        
+		<!-- Heading -->
+			<div id="heading" >
+				<h1 class="icon fa-user" style="font-family: serif"> About Us</h1>
+			</div>
+
+        
+        
+		<!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                    
+                    
+                <!-- Testimonials -->
+            
+                    <div class="inner">
+                        <header class="special">
+                            <h2>Meet The Team</h2>
+                            <p>Zeus, symbolizes the god of thunder and sky in ancient greek scripture. When humanity was ruled by famine he gave humanity the greatest gift they needed - rain. Following the somewhat superficial and surely "not so true" myth we a group of 3 roommates trying to push our way through bachelors decided to make the resources that are hoarded by organizations to be sold for profit rain freely upon the youth of our nation. Hope you relish what we have to offer. <br>" καλή τύχη ! "</p>
+                        </header>
+                        <hr>
+                        <div class="testimonials">
+                            
+                        
+                            <section>
+                                <div class="content">
+                                    <blockquote>
+                                        <p>Unintentionally Impeccable</p>
+                                    </blockquote>
+                                    <div class="author">
+                                        <div class="image">
+                                            <img src="{% static '/images/diyal.jpg' %}" alt="Ahsan" />
+                                        </div>
+                                        <p class="credit">  <strong style="font-size: 13px">Ahsan Junaid Diyal</strong> <br><br>&#8226; PIEAS <br>&#8226; GCU, Lahore <br>&#8226; Beaconhouse</span><br><br><button class="button fit small"><a href="mailto:ahsan@pakresult.com">Email Me</a></button></p>
+                                    </div>
+                                </div>
+                            </section>
+                        
+                            <section>
+                                <div class="content">
+                                    <blockquote>
+                                        <p>I program stuff & I make things.</p>
+                                    </blockquote>
+                                    <div class="author">
+                                        <div class="image">
+                                            <img src="{% static '/images/nadeem.jpg' %}" alt="Nadeem" />
+                                        </div>
+                                        <p class="credit">  <strong style="font-size: 13px">AbdulRahman Nadeem</strong> <br><br>&#8226; FAST-NU (LHR) <br>&#8226; LGS JT<br>  </span><br><br><button class="button fit small"><a href="mailto:ar@pakresult.com">Email Me</a></button></p>
+                                    </div>
+                                </div>
+                            </section>
+                           
+                            
+                            <section>
+                                <div class="content">
+                                    <blockquote>
+                                        <p>Strive For Excellence</p>
+                                    </blockquote>
+                                    <div class="author">
+                                        <div class="image">
+                                            <img src="{% static '/images/gujjar.jpg' %}" alt="Gujjar" />
+                                        </div>
+                                        <p class="credit">  <strong style="font-size: 13px">Muhammad Hamza</strong> <br> <br>&#8226; PIEAS <br>&#8226; PGC <br>&#8226; ABICS</span><br><br><button class="button fit small"><a href="mailto:humza@pakresult.com">Email Me</a> </button> </p>
+                                    </div> 
+                                </div>
+                            </section>
+                            
+                            <section></section>
+                            
+                        </div>
+                    </div>
+                            			
+            </div>
+        </section>
+            
+        
+        <section id="cta" class="wrapper">
+            <div class="inner"><hr>
+                <header>
+                    <h2>About Us</h2>
+                </header>
+                <strong>We at PakResult.com plan to furnish you with first-class instructive assets for various boards, colleges, and universities across Pakistan. Find under a  single site datasheets, merit records, and study guides for different examination boards our nation has. We trust in making access to refined and legitimate recourses simple and free. These assets are ordinarily elusive on the web and can be found in a printed format in the market at heavy costs. We have confidence in giving them to our nation's students in the most effective way for nothing out of their pocket. <br>Let's study! </strong>
+                <hr>
+            </div>
+        </section>
+        
+        
+		<!-- Footer -->
+        {% include "footer.html" %}
+
+		<!-- Scripts -->
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/browser.min.js" %}"></script>
+		<script src="{% static "js/breakpoints.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+
+	</body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>

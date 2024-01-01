@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: django-downloadview
+Version: 2.1.1
+Summary: Serve files with Django and reverse-proxies.
+Home-page: https://django-downloadview.readthedocs.io/
+Author: Benoît Bryon
+Author-email: benoit@marmelune.net
+License: BSD
+Keywords: file stream download FileField ImageField x-accel x-accel-redirect x-sendfile sendfile mod_xsendfile offload
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Django (>=1.11)
+Requires-Dist: requests
+Requires-Dist: setuptools
+Provides-Extra: test
+Requires-Dist: tox ; extra == 'test'
+
+###################
+django-downloadview
+###################
+
+`django-downloadview` makes it easy to serve files with `Django`_:
+
+* you manage files with Django (permissions, filters, generation, ...);
+
+* files are stored somewhere or generated somehow (local filesystem, remote
+  storage, memory...);
+
+* `django-downloadview` helps you stream the files with very little code;
+
+* `django-downloadview` helps you improve performances with reverse proxies,
+  via mechanisms such as Nginx's X-Accel or Apache's X-Sendfile.
+
+
+*******
+Example
+*******
+
+Let's serve a file stored in a file field of some model:
+
+.. code:: python
+
+   from django.conf.urls import url, url_patterns
+   from django_downloadview import ObjectDownloadView
+   from demoproject.download.models import Document  # A model with a FileField
+
+   # ObjectDownloadView inherits from django.views.generic.BaseDetailView.
+   download = ObjectDownloadView.as_view(model=Document, file_field='file')
+
+   url_patterns = ('',
+       url('^download/(?P<slug>[A-Za-z0-9_-]+)/$', download, name='download'),
+   )
+
+
+*********
+Resources
+*********
+
+* Documentation: https://django-downloadview.readthedocs.io
+* PyPI page: http://pypi.python.org/pypi/django-downloadview
+* Code repository: https://github.com/benoitbryon/django-downloadview
+* Bugtracker: https://github.com/benoitbryon/django-downloadview/issues
+* Continuous integration: https://travis-ci.org/benoitbryon/django-downloadview
+* Roadmap: https://github.com/benoitbryon/django-downloadview/milestones
+
+
+.. _`Django`: https://djangoproject.com
+
+

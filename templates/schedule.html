@@ -1,0 +1,864 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<link rel="stylesheet" href="{% static '../static/css/main.css' %}" />
+        <link rel="stylesheet" href="{% static '../static/css/custom-written.css' %}" />
+		<meta charset="utf-8" />
+        
+        <title>Prize Bond Schedule 2020-2021 | Latest Prize Bond Draw List</title>
+		<meta name="keywords" content="Prize bond schedule, Prize, bond, draw, schedule 2020 , PREMIUM Bond, download, pakistan, national savings, prize bond schedule 2020, prize bond schedule 2021, Pakresult.com, Pak Result">
+				
+        <meta name="description" content="Prize Bond Draw Schedule 2020 & 2021 of Rs. 100, 200, 750, 1500, 7500, 15000, 25000, 40000 and 40,000 Premium can be checked online. View 2020 Schedule of Prize bond, results date & time, and Prize Bond calendar in Pakistan. Downlaod latest draw schedule and Draw date, results and prize bond list, latest draw results & winners details online at Pakresult.com">
+
+        <meta property="og:title" content="Prize Bond Schedule 2020-2021 | Latest Prize Bond Draw List"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:description" content="Prize Bond Draw Schedule 2020 & 2021 of Rs. 100, 200, 750, 1500, 7500, 15000, 25000, 40000 and 40,000 Premium can be checked online. View 2020 Schedule of Prize bond, results date & time, and Prize Bond calendar in Pakistan. Downlaod latest draw schedule and Draw date, results and prize bond list, latest draw results & winners details online at Pakresult.com"/>
+        <meta property="og:site_name" content="PakResult.com"/>
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Prize Bond Schedule 2020 2021 Latest Prize Bond Draw Schedule List" />
+        <meta property="og:description" content="Prize Bond Draw Schedule 2020 & 2021 of Rs. 100, 200, 750, 1500, 7500, 15000, 25000, 40000 and 40,000 Premium can be checked online. View 2020 Schedule of Prize bond, results date & time, and Prize Bond calendar in Pakistan. Downlaod latest draw schedule and Draw date, results and prize bond list, latest draw results & winners details online at Pakresult.com" />
+        <meta property="og:site_name" content="PakResult.com" />
+        <meta property="article:tag" content="Prize bond schedule" />
+        <meta property="article:tag" content="Prize" />
+        <meta property="article:tag" content="bond" />
+        <meta property="article:tag" content="draw" />
+        <meta property="article:tag" content="schedule 2020" />
+        <meta property="article:tag" content="PREMIUM Bond" />
+        <meta property="article:tag" content="download" />
+        <meta property="article:tag" content="pakistan" />
+        <meta property="article:tag" content="national savings" />
+        <meta property="article:tag" content="prize bond schedule 2020" />
+        <meta property="article:tag" content="prize bond schedule 2021" />
+        <meta property="article:section" content="Result 2020" />
+        <meta property="og:image:width" content="380" />
+        <meta property="og:image:height" content="262" />
+        <meta property="og:image:alt" content="Prize Bond Schedule 2020-2021 | Latest Prize Bond Draw List"/>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="Prize Bond Draw Schedule 2020 & 2021 of Rs. 100, 200, 750, 1500, 7500, 15000, 25000, 40000 and 40,000 Premium can be checked online. View 2020 Schedule of Prize bond, results date & time, and Prize Bond calendar in Pakistan. Downlaod latest draw schedule and Draw date, results and prize bond list, latest draw results & winners details online at Pakresult.com" />
+    </head>
+
+    <style>html {
+  scroll-behavior: smooth;
+}
+
+    </style>
+    <style>
+	.pb_table{
+	}
+	.pb_data_cont{
+		margin-bottom: 15px;
+		float: left;
+		width: 100%;
+	}
+	.pb_data_cont select, .pb_data_cont input[type=text]{
+		width: 100%;
+		border: 1px solid #e3e4e8;
+		background-color: #fff;
+		padding: 5px;
+		box-sizing: border-box;
+		box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+		webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+	}
+	.pb_title {
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	.pb_data{
+	}
+	.half_div {
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+	}
+	
+	#series_number{
+		display: none;
+	}
+	.btn_cont{
+		width: 100%;
+		text-align: center;
+		float: left;
+	}
+	.btn_cont #pb_clear:hover, .btn_cont #pb_remove:hover, .btn_cont #pb_check:hover, #add_btn:hover{
+		color: white;
+		text-decoration: none;
+		opacity: 0.9;
+	}
+	#result_tbl{
+		display: none;
+	}
+	#result_tbl table{
+		border-collapse: collapse;
+	}
+	#result_tbl tr{
+	}
+	#result_tbl tr td{
+		border: 1px solid #ccc;
+	}
+	.signle_arr{
+		color: black; 
+		font-weight: bold;
+	}
+	.all_den_table{
+		width: 100%;
+		border-collapse: collapse;
+	}
+	.all_den_table tr{
+		
+	}
+	.all_den_table td{
+		border: 1px solid #ccc;
+		padding: 5px;
+	}
+	.all_den_table .signle_arr{
+		font-size: 18px;
+		margin-right: 5px;
+		color: #87b843;
+	}
+	.heads{
+		padding: 5px 0 10px 0; 
+		font-size: 16px;
+	}
+	.header_tbl {
+		height: 30px;
+		background-color: darkred;
+		line-height: 30px;
+		font-weight: bold;
+		color: white;
+	}
+	.win_amount_tbl tr td{
+		text-align: center;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		padding: 5px;
+		vertical-align: middle;
+	}
+	.header_tbl2 th {
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		padding: 5px;
+		font-weight: bold;
+		background-color: #ecffe5;
+	}
+	.win_amount_tbl {
+		width: 100%;
+		border-collapse: collapse;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		border: 1px solid #ccc;
+	}
+	.view_bond_link{
+		display: block;
+		font-size: 12px;
+		margin-top: 4px;
+	}
+	.red_cell{
+		color: maroon;
+	}
+	
+</style>
+<body class="is-preload">
+
+	<!-- Header -->
+		<header id="header">
+               <a class="logo" href="https://www.pakresult.com/" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com </a>
+               <nav>
+                   <a href="#menu" style="font-size: 18px">Menu</a>
+               </nav>
+           </header>
+
+	<!-- Nav -->
+        {% include "navbar.html" %}
+
+	<!-- Banner -->
+		<!-- Header -->
+		<div id="heading">
+				<h1 class="icon fa-dollar" style="font-family: serif"> Prize Bond Draw Schedule 2020 </h1>
+            
+			</div>
+
+
+	<!-- Highlights -->
+		<section class="wrapper">
+            
+            <div class="inner" style="text-align: center">
+                <p><strong>Prize Bond Draw Schedule 2020</strong> - Many prize bond holders search for various types of National Saving Prize Bonds List. You can find the schedule list of every draw here online. The <strong>prize bond schedule</strong> of Rs. <a href="https://www.pakresult.com/prizebond">100</a>, <a href="https://www.pakresult.com/prizebond">200</a>, <a href="https://www.pakresult.com/prizebond">750</a>, <a href="https://www.pakresult.com/prizebond">1500</a>, <a href="https://www.pakresult.com/prizebond">7500</a>, <a href="https://www.pakresult.com/prizebond">15000</a>, <a href="https://www.pakresult.com/prizebond">25000</a> and <a href="https://www.pakresult.com/prizebond">40000</a> premium respectively can be found online on PakResult.com. In the list, date wise schedule of prize bond draws is shown from January 2020 to December 2020.</p>
+        
+        <p>Note: <a href="https://www.pakresult.com/prizebond/schedule/"><u>Prize Bond Schedule</u></a> is regularly updated at PakResult.com including latest draw results till 01 November 20.</p>
+                <hr class="new1">
+                   <table class="win_amount_tbl">
+                  <thead>
+                    <tr class="header_tbl">
+                      <th colspan="7"> <h2 style="color: white; text-align: center">PRIZE BONDS DRAW COMPLETE SCHEDULE 2020</h2> </th>
+                    </tr>
+                    <tr class="header_tbl2">
+                      <th> Prize Bonds </th>
+                      <th> Draw # </th>
+                      <th> Date </th>
+                      <th> CITY </th>
+                      <th> Status </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                 
+                    <tr>
+                                            <td> 15000 </td>
+                      <td> #81 </td>
+                      <td> 02 January, 2020 </td>
+                      <td> Quetta </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                
+                    <tr>
+                                            <td> 750 </td>
+                      <td> #81 </td>
+                      <td> 15 January, 2020 </td>
+                      <td> Karachi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                       
+          
+                    <tr>
+                                            <td> 25000 </td>
+                      <td> #32 </td>
+                      <td> 03 February, 2020 </td>
+                      <td> Faisalabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 7500 </td>
+                      <td> #81 </td>
+                      <td> 03 February, 2020 </td>
+                      <td> Hyderabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 1500 </td>
+                      <td> #81 </td>
+                      <td> 17 February, 2020 </td>
+                      <td> Rawalpindi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 100 </td>
+                      <td> #29 </td>
+                      <td> 17 February, 2020 </td>
+                      <td> Peshawar </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                
+                    <tr>
+                                            <td> 40000 </td>
+                      <td> #12 </td>
+                      <td> 10 March, 2020 </td>
+                      <td> Multan </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                
+                    <tr>
+                                            <td> 200 </td>
+                      <td> #81 </td>
+                      <td> 16 March, 2020 </td>
+                      <td> Muzaffarabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                    <tr>
+                                            <td> 15000 </td>
+                      <td> #82 </td>
+                      <td> 01 April, 2020 </td>
+                      <td> Faisalabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 750 </td>
+                      <td> #82 </td>
+                      <td> 15 April, 2020 </td>
+                      <td> Hyderabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+               
+                
+                    <tr>
+                                            <td> 25000 </td>
+                      <td> #33 </td>
+                      <td> 04 May, 2020 </td>
+                      <td> Rawalpindi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                    <tr>
+                                            <td> 7500 </td>
+                      <td> #82 </td>
+                      <td> 04 May, 2020 </td>
+                      <td> Peshawar </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                    <tr>
+                                            <td> 1500 </td>
+                      <td> #82 </td>
+                      <td> 15 May, 2020 </td>
+                      <td> Muzaffarabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                    <tr>
+                                            <td> 100 </td>
+                      <td> #30 </td>
+                      <td> 15 May, 2020 </td>
+                      <td> Lahore </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 40000 </td>
+                      <td> #13 </td>
+                      <td> 10 June, 2020 </td>
+                      <td> Karachi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 200 </td>
+                      <td> #82 </td>
+                      <td> 15 June, 2020 </td>
+                      <td> Quetta </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                
+                    <tr>
+                                            <td> 15000 </td>
+                      <td> #83 </td>
+                      <td> 02 July, 2020 </td>
+                      <td> Hyderabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                    <tr>
+                                            <td> 750 </td>
+                      <td> #83 </td>
+                      <td> 15 July, 2020 </td>
+                      <td> Muzaffarabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+           
+               
+                
+                    <tr>
+                                            <td> 7500 </td>
+                      <td> #83 </td>
+                      <td> 03 August, 2020 </td>
+                      <td> Faisalabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+               
+                
+                    <tr>
+                                            <td> 25000 </td>
+                      <td> #34 </td>
+                      <td> 03 August, 2020 </td>
+                      <td> Lahore </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+               
+                
+                    <tr>
+                                            <td> 1500 </td>
+                      <td> #83 </td>
+                      <td> 17 August, 2020 </td>
+                      <td> Multan </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+                
+                    <tr>
+                                            <td> 100 </td>
+                      <td> #31 </td>
+                      <td> 17 August, 2020 </td>
+                      <td> Quetta </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+               
+                
+                    <tr>
+                                            <td> 40000 </td>
+                      <td> #14 </td>
+                      <td> 10 September, 2020 </td>
+                      <td> Rawalpindi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                
+                    <tr>
+                                            <td> 200 </td>
+                      <td> #83 </td>
+                      <td> 15 September, 2020 </td>
+                      <td> Peshawar </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+           
+               
+                
+                    <tr>
+                                            <td> 15000 </td>
+                      <td> #84 </td>
+                      <td> 01 October, 2020 </td>
+                      <td> Multan </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+               
+                
+                    <tr>
+                                            <td> 750 </td>
+                      <td> #84 </td>
+                      <td> 15 October, 2020 </td>
+                      <td> Lahore </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+               
+                
+                    <tr>
+                                            <td> 7500 </td>
+                      <td> #84 </td>
+                      <td> 02 November, 2020 </td>
+                      <td> Karachi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+                
+                    <tr>
+                                            <td> 25000 </td>
+                      <td> #35 </td>
+                      <td> 02 November, 2020 </td>
+                      <td> Peshawar </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+          
+                    <tr>
+                                            <td> 100 </td>
+                      <td> #32 </td>
+                      <td> 16 November, 2020 </td>
+                      <td> Faisalabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+          
+               
+                
+                    <tr>
+                                            <td> 1500 </td>
+                      <td> #84 </td>
+                      <td> 16 November, 2020 </td>
+                      <td> Quetta </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+               
+                
+                    <tr>
+                                            <td> 40000 </td>
+                      <td> #15 </td>
+                      <td> 10 December, 2020 </td>
+                      <td> Hyderabad </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                       
+           
+               
+                
+                    <tr>
+                                            <td> 200 </td>
+                      <td> #84 </td>
+                      <td> 15 December, 2020 </td>
+                      <td> Rawalpindi </td>
+                      <td class="red_cell">Check Result<a href="https://www.pakresult.com/prizebond" class="view_bond_link">View Result</a></td>
+                    </tr>
+                
+                    <tr>
+                      <td colspan="6" class="bold_text" align="center"> Note: In case draw fall in public holiday (s) the draw will be held on the following working day (s) </td>
+                    </tr>
+                  </tbody>
+                </table>
+                        
+          
+<br><hr>
+<br>
+        
+   	     <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 100 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 100/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 700,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 100/- </td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 200,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 100/- </td>
+                  <td align="center"> 1,199 </td>
+                  <td align="center"> 1,000 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+           </table>
+
+       	   <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 200 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 200/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 750,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 200/- </td>
+                  <td align="center"> 05 </td>
+                  <td align="center"> 250,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 200/- </td>
+                  <td align="center"> 2,349 </td>
+                  <td align="center"> 1,250 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+            </table>
+
+           <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 750 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 750/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 1,500,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 750/- </td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 500,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 750/- </td>
+                  <td align="center"> 1696 </td>
+                  <td align="center"> 9,300 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+            </table>
+
+           <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 1500 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 1500/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 3,000,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 1500/- </td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 1,000,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 1500/- </td>
+                  <td align="center"> 1696 </td>
+                  <td align="center"> 18,500 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+            </table>
+
+           <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 7500 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 7500/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 15,000,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 7500/- </td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 5,000,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 7500/- </td>
+                  <td align="center"> 1696 </td>
+                  <td align="center"> 93,000 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+           </table>
+        
+			<table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 15000 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 15000/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 30,000,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 15000/- </td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 10,000,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 15000/- </td>
+                  <td align="center"> 1696 </td>
+                  <td align="center"> 185,000 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+            </table>
+        
+            <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 25000 Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 25000/- </td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 50,000,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 25000/- </td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 15,000,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 25000/- </td>
+                  <td align="center"> 1696 </td>
+                  <td align="center"> 312,000 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+            </table>
+
+            
+            
+            <table class="win_amount_tbl">
+              <thead>
+                <tr class="header_tbl">
+                  <th colspan="7" style="color: white; text-align: center"> Winning Amount of Rs. 40000 Premium Prize Bond </th>
+                </tr>
+                <tr class="header_tbl2">
+                  <th scope="col"> List </th>
+                  <th scope="col"> No of Prizes </th>
+                  <th scope="col"> Winning Amount (Rs) </th>
+                  <th scope="col"> Prizes </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Prize Bond RS. 40000 Premium</td>
+                  <td align="center"> 01 </td>
+                  <td align="center"> 80,000,000 </td>
+                  <td align="center"> 1st Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 40000 Premium</td>
+                  <td align="center"> 03 </td>
+                  <td align="center"> 30,000,000 </td>
+                  <td align="center"> 2nd Prize </td>
+                </tr>
+                <tr>
+                  <td> Prize Bond RS. 40000 Premium</td>
+                  <td align="center"> 660 </td>
+                  <td align="center"> 500,000 </td>
+                  <td align="center"> 3rd Prize </td>
+                </tr>
+              </tbody>
+            </table>
+                </div>
+
+</section>
+
+    
+<br>
+    
+    
+    <div class="inner">
+     <header class="special">
+                  
+                   <section class="content">
+               <p>
+        	The announcement of the Prize Bond 25000 rupees draw will be made on 03rd August 2020 in Lahore and the complete result of the draw of the prize bond will be provided there. The people, who are participating in the draw, they can have the access to the results online. The lucky draw number is 34 and according to the National Savings Lahore, the first prize for 25000 prize bond is Rs. 40,000, premium worth Rs.50,000,000 and Rs.15,000,000 as there are 3 prizes for the second position. The third prize of Rs.312,000 is awarded to about 1696 lucky winners. 
+               </p>
+               <p><strong>Prize Bond List 2020</strong>: The draws of Prize Bond worth 25000 PKR were announced on 03rd August 2020 in Lahore and complete result is available there. You are also asked to check the current prize bond numbers online and you can check old draw results by selecting the draw numbers for each denomination. The people can also find the new and old draws of the prize bond on the desktop screen and mobile version. They can find each prize bonds updates accurately and on time. They can find all prize bonds draw details including Rs.100, Rs.200, Rs.750, Rs.1500, Rs.7500, Rs.15,000, Rs.25000 and Rs.40,000 with respectively and prize bond schedule 2020 list, which is provided on this page.</p>
+               <h2 style="font-size: 20px">
+            <b>Prize Bond List 2020</b><hr>
+                </h2>
+               <p><strong>National Saving Prize Bond List 2020</strong>: A prize bond is actually a lottery bond, it is a security with non-interest. The <a href="https://www.pakresult.com/prizebond/"><strong>Prize Bond</strong></a> is issued by the <strong>Prize Bond Company Limited</strong> on behalf of the Minister for Finance. In Pakistan, the <i>Ministry of Finance</i> also issues the Prize Bonds. For the first time in Pakistan, the idea of prize bond was given in 1960 which is still in work. The prize bond is considered as a gold investment and bearer security.</p>
+               
+               <p>No one can become rich overnight and some people think that there is no shortcut for success, actually they are saying wrong. It is true that a person can be a richest overnight and can accede to elevator of success with a prize bond. However, no one can be so intelligent to know how to make his newly rich bank account sustainable overnight. The reason is that only luck is not enough, skills also go with. To take part in a <i>prize bond</i> scheme is a legal procedure for mindfully investment, safe and availability of more chances to win prized money in a short period of time.</p>
+            <hr><h3>PakResult.com</h3><br>
+                    
+                    
+                   </section> 
+                </header></div>
+            	
+	<!-- Footer -->
+    {% include "footer.html" %}
+	<!-- Scripts -->
+
+
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/browser.min.js" %}"></script>
+		<script src="{% static "js/breakpoints.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+
+</body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>

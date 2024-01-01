@@ -1,0 +1,111 @@
+<div id="overlay"><span class="spinner"></span></div>
+
+		<footer id="footer">
+			<div class="inner">
+				<div class="content">
+					<section>
+						<!--Subscription-->
+						<div class="card">
+								
+                                    <form  id="sub_box">
+                                    <div class="container" style="background-color: #111111">
+									<h2>Subscribe to our Weekly Updates!</h2>
+									<p>Stay updated with the latest news, results and education related information updates</p>
+								</div>
+                                        <div  class="container" style="background-color:darkred">
+                                    <div id="snackbar" style="background-color:black">Subscribed</div>
+
+                                    <label for="sub_name" style="text-align: center"><h3></h3></label>
+                                    <label for="sub_email" style="text-align: center"><h3></h3></label>
+
+									<input type="text" id="sub_name" placeholder="Full Name" name="name" required>
+									<input type="email" id="sub_email" placeholder="Email address" name="mail" required>
+                                        
+                                    <div class="container">
+                                        <input type="submit" value="Subscribe"  style="background-color: #111111">
+                                        </div>
+                                        </div>
+                                    </form>
+								
+						</div>
+					</section>
+
+					<section><br>
+						<h4>Categories</h4>
+						<ul class="alt">
+                            <li><a href="https://shop.pakresult.com/">Shop</a></li>
+                            <li><a href="/coronavirus">Live COVID Counter</a></li>
+							<li><a href="/boardresult">Board Results</a></li>
+							<li><a href="/pairing">Pairing Schemes</a></li>
+							
+							<li><a href="/comingsoon">9th Notes</a></li>
+							<li><a href="/comingsoon">10th Notes</a></li>
+							<li><a href="/comingsoon">11th Notes</a></li>
+							<li><a href="/comingsoon">12th Notes</a></li>
+							<li><a href="/preperation/book-pdf">Books PDF</a></li>
+                            <li><a href="/prizebond/">Prize Bonds Checker</a></li>
+                            <li><a href="/prizebond/schedule">Prize Bond Draw Schedule</a></li>
+						</ul>
+					</section>
+                    
+					<section><br>
+						<h4>Admissions | Entry Tests</h4>
+						<ul class="alt">
+                            
+							<li><a href="/datesheets">Date Sheets</a></li>
+                            <li><a href="/comingsoon">Past Papers</a></li>
+							<li><a href="/meritcal">Merit Calculator</a></li>
+							<li><a href="/comingsoon">Merit Lists</a></li>
+							<li><a href="/uniresult">University Result</a></li>
+							<li><a href="/comingsoon">MCAT</a></li>
+							<li><a href="/comingsoon">NET</a></li>
+							<li><a href="/comingsoon">ECAT</a></li>
+						</ul>
+					</section>
+                    
+
+
+				</div>
+				<div class="copyright" style="font-size: 18px; color: darkgray">
+					&copy; All Rights Reserved | 2020 | <a href="https://www.pakresult.com/" style="color: white">PakResult.com</a>
+				</div>
+			</div>
+<script>
+     function loading_on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function loading_off() {
+
+        document.getElementById("overlay").style.display = "none";
+    }
+
+ $("#sub_box").submit(function (e) {
+        loading_on()
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/subscribe/',
+            data: {
+                name: $("#sub_name").val(),
+                email: $("#sub_email").val(),
+
+                csrfmiddlewaretoken: "{{ csrf_token }}",
+                action: 'post'
+            },
+            success: function (data) {
+                $("#sub_email").val("");
+                $("#sub_name").val(""),
+                loading_off();
+                 var x = document.getElementById("snackbar");
+
+                x.className = "show";
+
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+            },
+        });
+        return false;
+    });
+        </script>
+		</footer>

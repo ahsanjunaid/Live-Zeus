@@ -1,0 +1,194 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	<link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<title>University Results</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+	</head>
+    
+
+    
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+               <a class="logo" href="/home" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com</a>
+				<nav>
+					<a href="#menu" style="font-size: 18px">Menu</a>
+				</nav>
+			</header>
+
+        
+        
+		<!-- Nav -->
+	        {% include "navbar.html" %}
+		<!-- Heading -->
+			<div id="heading" >
+				<h1 class="icon fa-graduation-cap" style="font-family: serif"> University Results</h1>
+			</div>
+        
+        
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content" style="background-color: #f8f8f8">
+						<header>
+                            <h2 style="text-align: center">Select Your University</h2>
+                            <hr>
+                        </header>
+                        
+                        
+                       <div class="highlights">
+                           
+                           <!--Column 1-->
+                           <div class="col-6 col-12-small">
+                               <ol>
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="punjab-university"><img src="{% static 'images/uniimages/punjab-university.gif' %}"></a>
+                                                   <a href="punjab-university"><h3><b>Punjab University</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                                   
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="peshawar-university"><img src="{% static 'images/uniimages/peshawar-university.gif' %}"></a>
+                                                   <a href="peshawar-university"><h3><b>University Of Peshawar</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                                   
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="islamia-university"><img src="{% static 'images/uniimages/islamia-university-bahawalpur.gif' %}"></a>
+                                                   <a href="islamia-university"><h3><b>Islamia University Bahawalpur</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                               </ol>
+                           </div>
+                            
+                           <!--Column 2-->
+                           <div class="col-6 col-12-small">
+                               <ol>
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="karachi-university"><img src="{% static 'images/uniimages/karachi-university.png' %}"></a>
+                                                   <a href="karachi-university"><h3><b>Karachi University</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                                   
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="allama-iqbal-university"><img src="{% static 'images/uniimages/alama-iqbal-university.png' %}"></a>
+                                                   <a href="allama-iqbal-university"><h3><b>Allama Iqbal Open University</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                               </ol>
+                           </div>
+                           
+                           <!--Column 3-->
+                                        <div class="col-6 col-12-small">
+                               <ol>
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="sargodha-university"><img src="{% static 'images/uniimages/sargodha-university.gif' %}"></a>
+                                                   <a href="sargodha-university"><h3><b>University Of Sargodha</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                                   
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="ajk-university"><img src="{% static 'images/uniimages/ajk-university.gif' %}"></a>
+                                                   <a href="ajk-university"><h3><b>AJK University</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                                   
+                                   <ul>
+                                       <section>
+                                           <div class="content">
+                                               <header>
+                                                   <a href="bahauddin-zakariya-university"><img src="{% static 'images/uniimages/bz-university.gif' %}"></a>
+                                                   <a href="bahauddin-zakariya-university"><h3><b>Bahauddin Zakariya University</b></h3></a>
+                                               </header>
+                                           </div>
+                                       </section>         
+                                   </ul>
+                               </ol>
+                           </div>
+                        </div>
+                        
+					</div>
+				</div>
+			</section>
+
+        
+        
+		<!-- Footer -->
+        {% include "footer.html" %}
+
+		<!-- Scripts -->
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/browser.min.js" %}"></script>
+		<script src="{% static "js/breakpoints.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+	</body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>

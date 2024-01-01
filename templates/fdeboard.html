@@ -1,0 +1,235 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+	<link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<title>FDE</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+    </head>
+    
+    <style> /*DONT REMOVE*/
+        .abc{margin: auto;
+            width: 70%;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border: 3px solid darkred;
+            border-bottom: none;}
+        
+       .xyz{margin: auto;
+            width: 70%;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top:20px;
+            border: 3px solid white;
+            border-bottom: none;}
+    </style>
+
+    
+	   <body class="is-preload">
+           <div id="overlay"><span class="spinner"></span></div>
+
+           <!-- Header -->
+           <header id="header">
+               <a class="logo" href="/home" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com</a>
+               <nav>
+                   <a href="#menu" style="font-size: 18px">Menu</a>
+               </nav>
+           </header>
+
+        
+        
+           <!-- Nav -->
+           {% include "navbar.html" %}
+
+        
+        
+           <!-- Heading -->
+           <div id="heading" >
+               <h1 style="font-family: serif"> FDE Results</h1>
+           </div>
+
+        
+        
+           <!-- Main -->
+           <section id="main" class="wrapper" >
+                <table>
+                    <tr>
+                        <td style="text-align: center" ><img src="{% static '/images/boardimages/fde.gif' %}"><h1 style="font-family: 'Times New Roman', Times,  serif;">     <strong>FDE</strong> </h1>
+                            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 25px">Federal Directorate of Education</h2>
+                        </td>
+                    </tr>       
+               </table>	
+           </section>
+            <!--FORM-->
+           <section>
+
+               <div class="inner" style="border: 5px solid darkred" style="background-color: #000000">
+                   <footer id="footer">
+                       <h1 class="abc">Board Results</h1>
+                       <div class="inner" style="background-color: #212121">
+                 
+                           <section>
+                               <!--Subscription-->
+                               <form id="result">
+                                <div style="padding: 30px" class="row gtr-uniform">
+			     							
+                                    <div class="col-6 col-12-small">
+                                        <h2 >Roll Number :</h2>
+                                    </div>
+                                    <div class="coll-6 col-12-small">
+                                        <input type="text" name="rollno" id="rollno" value="" placeholder="Enter Roll Number" maxlength="6" style="font-size: 18px"/>
+                                    </div>
+                                    <!-- Break -->
+                                    <div class="col-6 col-12-small"><h2>Select Year :</h2></div>
+                                    <div class="col-6 col-12-small">
+                                        <select name="category" id="year" style="font-size: 18px">
+                                            <option value="2019" selected>2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                        </select>
+                                    </div>
+                                    <!-- Break -->
+                                    <div class="col-6 col-12-small"><h2>Select Exam Type :</h2></div>
+                                    <div class="col-6 col-12-small">
+                                        <select name="category" id="part" style="font-size: 18px">
+                                            <option value="2" selected>Part 2 (Annual)</option>
+                                            <option value="1">Part 1 (Annual)</option>
+                                            <option value="0">Supplementary</option>
+                                        </select>
+                                    </div>
+                                    <!--Break-->
+                                    <div class="col-6 col-12-small">
+                                        <input type="radio" id="radio-inter" name="radio" checked>
+                                        <label for="radio-inter"><strong style="font-size: 18px">Intermediate</strong></label>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <input type="radio" id="radio-matric" name="radio">
+                                        <label for="radio-matric"><strong style="font-size: 18px">Matric</strong></label>
+                                    </div>
+                                    <!-- Break -->
+                                    <div class="col-12">
+
+                                    </div>
+                                   </div>
+
+
+                       <div class="xyz" >
+                           <input type="submit" value="View Result" class="primary" style="font-size: 20px"/>
+                       </div>
+                                   </form>
+                           </section>
+                       </div>
+                       
+
+
+                   </footer>
+               </div>
+           </section>
+           
+           
+        
+           <section id="main" class="wrapper">
+               <div class="content" style="background-color: white">
+	   		{{ htmlcontent|safe}}
+                   </div>
+           </section>
+
+
+           <script>
+               function loading_on() {
+                   document.getElementById("overlay").style.display = "block";
+               }
+
+               function loading_off() {
+
+                   document.getElementById("overlay").style.display = "none";
+               }
+               $("#contact_forum").submit(function (e) {
+                   loading_on()
+                   e.preventDefault();
+                   $.ajax({
+                       type: 'POST',
+                       data: {
+                           fname: $("#fname").val(),
+                           lname: $("#lname").val(),
+                           email: $("#email").val(),
+                           content: $("#content").val(),
+
+                           csrfmiddlewaretoken: "{{ csrf_token }}",
+                           action: 'post'
+                       },
+                       success: function (data) {
+                           $("#fname").val("");
+                           $("#lname").val("");
+                           $("#email").val("");
+                           $("#content").val("");
+                           loading_off();
+                           var x = document.getElementById("snackbar");
+
+                           x.className = "show";
+
+                           setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                           
+                       },
+                   });
+                   return false;
+               });
+           </script>
+        
+           <!-- Footer -->
+           {% include "footer.html" %}
+
+           <!-- Scripts -->
+           <script src="{% static "js/jquery.min.js" %}"></script>
+           <script src="{% static "js/browser.min.js" %}"></script>
+           <script src="{% static "js/breakpoints.min.js" %}"></script>
+           <script src="{% static "js/util.js" %}"></script>
+           <script src="{% static "js/main.js" %}"></script>
+
+	   </body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+ 
+        
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</html>

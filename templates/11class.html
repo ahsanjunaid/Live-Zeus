@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+	<link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<title>Download Matric Inter All Classes Books PDFs (5th 8th 9th 10th 11th 12th)</title>
+        
+        <meta http-equiv="refresh" content="0; URL=/comingsoon" /><!-- REMOVE THIS AFTER COMPLETION-->
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+    </head>
+    
+    <style> /*DONT REMOVE*/
+        .abc{margin: auto;
+            width: 70%;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border: 3px solid darkred;
+            border-bottom: none;}
+        
+        .xyz{margin: auto;
+            width: 70%;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top:20px;
+            border: 3px solid white;
+            border-bottom: none;}
+    </style>
+
+    
+	   <body class="is-preload">
+           <div id="overlay"><span class="spinner"></span></div>
+
+           <!-- Header -->
+           <header id="header">
+               <a class="logo" href="/home" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com</a>
+               <nav>
+                   <a href="#menu" style="font-size: 18px">Menu</a>
+               </nav>
+           </header>
+
+        
+        
+           <!-- Nav -->
+           {% include "navbar.html" %}
+
+        
+        
+           <!-- Heading -->
+           <div id="heading" >
+               <h1 style="font-family: serif" class="icon fa-book"> PDF Books All Classes</h1>
+           </div>
+
+        
+        
+           <!-- Main -->
+           <section class="wrapper">
+            <div class="inner"><h2 style="text-align : center">Choose Class</h2><hr>
+                <div class="highlights" style="background-color: #f8f8f8">
+					<section>
+						<div class="content">
+							<header>
+								<a href="5th"><img src="/static/images/books/5class.jpg"></a>
+								<a href="5th"><h3><b>5<sup>th</sup> Class Books</b></h3></a>
+                            </header>
+							<p>Download Latest 5th Class All Subjects Books in PDF Format Free!</p>
+                        </div>
+					</section>
+                    
+                    <section>
+						<div class="content">
+							<header>
+								<a href="8th"><img src="/static/images/books/8class.jpg"></a>
+								<a href="8th"><h3><b>8<sup>th</sup> Class Books</b></h3></a>
+                            </header>
+							<p>Download Latest 8th Class All Subjects Books in PDF Format Free!</p>
+                        </div>
+					</section>
+                    
+                    <section>
+						<div class="content">
+							<header>
+								<a href="9th"><img src="/static/images/books/9class.jpg"></a>
+								<a href="9th"><h3><b>9<sup>th</sup> Class Books</b></h3></a>
+                            </header>
+							<p>Download Latest 9th Class All Subjects Books in PDF Format Free!</p>
+                        </div>
+					</section>
+                    
+                    <section>
+						<div class="content">
+							<header>
+								<a href="10th"><img src="/static/images/books/10class.jpg"></a>
+								<a href="10th"><h3><b>10<sup>th</sup> Class Books</b></h3></a>
+                            </header>
+							<p>Download Latest 10th Class All Subjects Books in PDF Format Free!</p>
+                        </div>
+					</section>
+                    
+                    <section>
+						<div class="content">
+							<header>
+								<a href="11th"><img src="/static/images/books/11class.jpg"></a>
+								<a href="11th"><h3><b>11<sup>th</sup> Class Books</b></h3></a>
+                            </header>
+							<p>Download Latest 11th Class All Subjects Books in PDF Format Free!</p>
+                        </div>
+					</section>
+                    
+                    <section>
+						<div class="content">
+							<header>
+								<a href="12th"><img src="/static/images/books/12class.jpg"></a>
+								<a href="12th"><h3><b>12<sup>th</sup> Class Books</b></h3></a>
+                            </header>
+							<p>Download Latest 12th Class All Subjects Books in PDF Format Free!</p>
+                        </div>
+					</section>
+				</div><hr>
+               </div>
+           </section>
+        
+           <!-- Footer -->
+           {% include "footer.html" %}
+
+           <!-- Scripts -->
+           <script src="{% static "js/jquery.min.js" %}"></script>
+           <script src="{% static "js/browser.min.js" %}"></script>
+           <script src="{% static "js/breakpoints.min.js" %}"></script>
+           <script src="{% static "js/util.js" %}"></script>
+           <script src="{% static "js/main.js" %}"></script>
+
+	   </body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+ 
+        
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>

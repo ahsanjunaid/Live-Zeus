@@ -1,0 +1,342 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+	<link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+
+		<title>Prize Bond List 2020 - Check Prize Bond Draw Results Online</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="Check Online Prize Bonds Draw Results & 2020 Prize Bond List and Schedule List 100, 200, 750, 1500, 7500, 15000, 25000, 40000. Get everything about Prize Bond in Pakistan at Pakresult.com" />
+		<meta name="keywords" content="Prize Bond List, Prize Bonds, Prize Bond Draw, Prize Bond Results, Winner List, Pakresult, Pak Result.com, PakResult.com" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <meta property="og:title" content="Prize Bond List 2020 Check Pakistan Prize Bond Draw Results Online">
+        <meta property="og:type" content="article">
+        <meta property="og:description" content="Check Online Prize Bonds Draw Results & 2020 Prize Bond List and Schedule List 100, 200, 750, 1500, 7500, 15000, 25000, 40000. Get everything about Prize Bond in Pakistan at Pakresult.com">
+        <meta property="og:site_name" content="Pakresult.com">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Prize Bond List 2020 Check Pakistan Prize Bond Draw Results Online">
+        <meta property="og:description" content="Check Prize bond draw Results 2020 online. All previous and latest Prize Bond number and Schedule List for 100, 200, 750, 1500, 7500, 15000, 25000, 40000 bonds is available in Pakistan.">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:description" content="Check Prize bond draw Results 2020 online. All previous and latest Prize Bond number and Schedule List for 100, 200, 750, 1500, 7500, 15000, 25000, 40000 bonds is available in Pakistan.">
+        <meta name="twitter:title" content="Prize Bond List 2020 Check Pakistan Prize Bond Draw Results Online">
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+    </head>
+    
+    <style> /*DONT REMOVE*/
+        .abc{margin: auto;
+            width: 70%;
+            background-color: #F1F1F1;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border: 4px solid darkgreen;
+            border-bottom: none;
+            font-family: serif;}
+        
+        .xyz{margin: auto;
+            width: 70%;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top:20px;
+            border: 3px solid white;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom: none;}
+        
+        
+        
+        .divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid white;
+	display: table-cell;
+	padding: 3px 10px;
+    
+    font-family: Cambria;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+    text-align: center;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+     
+
+    </style>
+
+    
+	   <body class="is-preload">
+
+           <div id="overlay"><span class="spinner"></span></div>
+
+           <!-- Header -->
+           <header id="header">
+               <a class="logo" href="https://www.pakresult.com/" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com </a>
+               <nav>
+                   <a href="#menu" style="font-size: 18px">Menu</a>
+               </nav>
+           </header>
+
+
+        
+           <!-- Nav -->
+           {% include "navbar.html" %}
+
+        
+        
+           <!-- Heading -->
+           <div id="heading">
+               <h1 style="font-family: serif" class="icon fa-money"> Prize Bond Draw Result</h1>
+              
+           </div><br>
+           <div style="text-align: center; padding: 10px">
+    <p>Check Prize Bond Draw Schedule 2020 - Many prize bond holders search for various types of National Saving Prize Bonds List. You can find the schedule list of every draw here online. The prize bond schedule of Rs. 100, 200, 750, 1500, 7500, 15000, 25000 and 40000 </p><a href="schedule" class="button primary">Prize Bond Draw Schedule 2020</a></div>
+        
+        
+           <!-- Main -->
+           <section id="main" class="wrapper" >
+
+
+               <div class="inner" style="border: 5px solid darkgreen; border-radius: 33px">
+                   <footer id="footer" style="background-color: forestgreen; border-radius: 26px">
+                       <h1 class="abc" style="color: darkgreen">Prize Bond Result</h1>
+                       <div class="inner" style="background-color: #212121;border: 4px solid white;border-top-left-radius: 31px; border-top-right-radius: 31px;">
+                 
+                           <section>
+                               <!--Subscription-->
+                               <form id="result" style="border-right: none; border-left: none; border-top: none;border-top-left-radius: 27px; border-top-right-radius: 27px;">
+                                <div style="padding: 30px" class="row gtr-uniform">
+			     							
+                                    <div class="col-6 col-12-small">
+                                        <h2 >Prize Bond Ammount :</h2>
+                                    </div>
+                                    <div class="coll-6 col-12-small">
+                                        <select name="category" id="prize" style="width: 100%; font-size: 18px;">
+                                            <option value=""> Select Amount </option>
+                                            <option value="1">100</option>
+                                            <option value="2">200</option>
+                                            <option value="3">750</option>
+                                            <option value="4">1500</option>
+                                            <option value="5">7500</option>
+                                            <option value="6">15000</option>
+                                            <option value="7">25000</option>
+                                            <option value="8">40000</option>
+                                            <option value="9">40000 Premium Bond</option>
+												</select>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <h2 >Draw Date :</h2>
+                                    </div>
+                                    <div class="coll-6 col-12-small" id="drawdateColumn">
+                                        <select name="category" id="drawdate"  style="width: 100%; font-size: 18px">
+                                             {{ htmlDropdown|safe}}
+												</select>
+                                    </div>
+                                    <div class="col-12" style="text-align: center">
+                                        <h2 >Single Search </h2>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" name="rollno" id="single" value="" placeholder="Enter Number" maxlength="6" style="font-size: 18px"/>
+                                    </div>
+                                    <div class="col-12" style="text-align: center">
+                                        <h2 >Series Search </h2>
+                                    </div>
+                                    <div class="col-4 col-12-small" style="text-align: right">
+                                        <input type="text" name="rollno" id="rangefrom" value="" placeholder="Serires Start No." maxlength="6" style="font-size: 18px"/>
+                                    </div>
+                                    <div class="col-4 col-12-small" style="text-align: center">
+                                        <p style="font-size: 30px; color: white"> 	To </p>
+                                    </div>
+                                    <div class="col-4 col-12-small" style="text-align: left">
+                                        <input type="text" name="rollno" id="rangeto" value="" placeholder="Series End No." maxlength="6" style="font-size: 18px"/>
+                                    </div>
+                                    
+                                    
+                                   
+                                    </div>
+                                 
+
+
+                       <div class="xyz" >
+                           <input type="submit" value="Search" class="primary" style="font-size: 20px; background-color: darkgreen"/>
+                       </div>
+                                   </form>
+                           </section>
+                          <section id="maine" style="overflow-x:auto">
+
+                                    {{ Finalresult|safe }}
+
+                       
+                               </section>
+                       </div>
+                       
+                    <br>
+                        
+                   </footer>
+               </div><br>
+               <br>
+               <section class="content">
+               <p>
+        	The announcement of the Prize Bond 25000 rupees draw will be made on 03rd August 2020 in Lahore and the complete result of the draw of the prize bond will be provided there. The people, who are participating in the draw, they can have the access to the results online. The lucky draw number is 34 and according to the National Savings Lahore, the first prize for 25000 prize bond is Rs. 40,000, premium worth Rs.50,000,000 and Rs.15,000,000 as there are 3 prizes for the second position. The third prize of Rs.312,000 is awarded to about 1696 lucky winners. 
+               </p>
+               <p><strong>Prize Bond List 2020</strong>: The draws of Prize Bond worth 25000 PKR were announced on 03rd August 2020 in Lahore and complete result is available there. You are also asked to check the current prize bond numbers online and you can check old draw results by selecting the draw numbers for each denomination. The people can also find the new and old draws of the prize bond on the desktop screen and mobile version. They can find each prize bonds updates accurately and on time. They can find all prize bonds draw details including Rs.100, Rs.200, Rs.750, Rs.1500, Rs.7500, Rs.15,000, Rs.25000 and Rs.40,000 with respectively and prize bond schedule 2020 list, which is provided on this page.</p>
+               <h2 style="font-size: 20px">
+            <b>Prize Bond List 2020</b><hr>
+                </h2>
+               <p><strong>National Saving Prize Bond List 2020</strong>: A prize bond is actually a lottery bond, it is a security with non-interest. The <a href="https://www.pakresult.com/prizebond/"><strong>Prize Bond</strong></a> is issued by the <strong>Prize Bond Company Limited</strong> on behalf of the Minister for Finance. In Pakistan, the <i>Ministry of Finance</i> also issues the Prize Bonds. For the first time in Pakistan, the idea of prize bond was given in 1960 which is still in work. The prize bond is considered as a gold investment and bearer security.</p>
+               
+               <p>No one can become rich overnight and some people think that there is no shortcut for success, actually they are saying wrong. It is true that a person can be a richest overnight and can accede to elevator of success with a prize bond. However, no one can be so intelligent to know how to make his newly rich bank account sustainable overnight. The reason is that only luck is not enough, skills also go with. To take part in a <i>prize bond</i> scheme is a legal procedure for mindfully investment, safe and availability of more chances to win prized money in a short period of time.</p>
+               
+               <p>To make one’s desires and dreams true, <strong>Prize Bond Scheme</strong> acts as a premium chance. A person can win a huge amount of money prize to be the richest personality in a very short period through prize bonds.</p>
+               
+               <p>The <u>Prize Bonds</u> are issued in a specific series which consist of one less than 1,000,000 bonds. The <a href="https://www.pakresult.com/prizebond/">prize bonds</a> are issued in denominations  of Rs. 100, Rs. 200, Rs. 750, Rs.1500, Rs. 7500, Rs. 15000, Rs.25000 and Rs. 40000. The <strong>Prize Bond List 2020</strong> is issued when the lucky draws are held and at the time of the announcement of the results. The prize bond list is issued for  the whole year and days, date and cities are marked in the list specifically. Each year, Prize Bond Lucky draws are held quarterly.</p>
+               
+               <p>On PakResult.com the complete detail about <strong>Prize Bond List 2020</strong> uploaded for various prize bond holders who aim for different denominations exclusively. You can easily <strong>search prize bond</strong> winning numbers on this page online. As every  time a prize bond draw is held, so the number of prizes and winning amount vary differently. On PakResult.com, You can’t only check prize bond lucky draws result  but also locate and search about numbers which are expected to win.</p>
+               
+               <p>The page is built for the ease of the users. A user can check the results simply by putting and submitting information about denomination, date range and draw date.</p>
+               
+               <p>On this page you hav easy way to find the <strong>Prize Bond Draw Results of 2020</strong> and explore the schedule list of the whole year as well. Prize Bonds is an effective way of investment and the <strong>National Prize Bonds</strong> bearer type of security is available in under the value of Rs 200, RS 750, RS 15,000, and RS 40,000 respectively. The prize bonds are issued in a specific order, in which each series have less than 1, 000, 000 bonds. In Pakistan the poor and average income earners can try their fortune and luck by availing the opportunity to take part in Prize Bond Schemes.</p>
+               
+               <p>So you people are waiting for what? Just come and be a part of lucky draw to try your luck, purchase a prize bond and pray hard. Overnight! You might be a richest personality. Just find the results of recent prize bond draws now online on this page. The complete list of saving prize bonds lucky draws, <a href="https://www.pakresult.com/prizebond/schedule">prize bonds schedule</a> and prize bond winner’s lists and everything else in relation on a accurate and consistent base can be found on PakResult.com. To check the <a href="schedule">prize bond draw schedule list 2020</a> and more help just click at PakResult.com right now.</p>
+               </section>
+           </section>
+        <br>
+
+
+
+        
+           <!-- Footer -->
+           {% include "footer.html" %}
+
+           <!-- Scripts -->
+           <script src="{% static "js/browser.min.js" %}"></script>
+           <script src="{% static "js/breakpoints.min.js" %}"></script>
+           <script src="{% static "js/util.js" %}"></script>
+           <script src="{% static "js/main.js" %}"></script>
+
+
+
+	   </body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+ 
+        
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+            <script>
+                    function loading_on() {
+        document.getElementById("overlay").style.display = "block";
+    }
+    function loading_off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+    $("#prize").change(function (e) {
+        loading_on();
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+
+            data: {
+
+                prize: $("#prize").val(),
+
+
+                csrfmiddlewaretoken: "{{ csrf_token }}",
+                action: 'post',
+                forum: 'DropDown',
+            },
+            success: function (data) {
+                loading_off();
+                $("#drawdate").html(data);
+                {#$("body").html(data);#}
+
+                {#var elmnt = document.getElementById("maine");#}
+                {#elmnt.scrollIntoView();#}
+
+                  // document ready
+            },
+        });
+        return false;
+    });
+
+    $("#result").submit(function (e) {
+        loading_on();
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+
+            data: {
+
+                country: $("#prize").val(),
+                state: $("#drawdate").val(),
+                range_from: $("#rangefrom").val(),
+                range_to: $("#rangeto").val(),
+                pb_number_list: $("#single").val(),
+
+                csrfmiddlewaretoken: "{{ csrf_token }}",
+                action: 'post',
+                forum: 'Result',
+            },
+            success: function (data) {
+                loading_off();
+                $("#maine").html(data.Finalresult);
+
+                {#$("body").html(data);#}
+
+                {#var elmnt = document.getElementById("maine");#}
+                {#elmnt.scrollIntoView();#}
+
+
+
+                  // document ready
+            },
+        });
+        return false;
+    });
+        </script>
+
+</html>

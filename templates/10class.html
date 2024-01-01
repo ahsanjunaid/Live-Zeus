@@ -1,0 +1,1509 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+	<link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<title>Download Matric Inter All Classes Books PDFs (5th 8th 9th 10th 11th 12th)</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+    </head>
+    
+    <style> /*DONT REMOVE*/
+        @import "compass/css3";
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::before,
+::after {
+    content: "";
+}
+
+html,
+body {
+    height: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: #ecf0f1;
+    color: #34495e;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    border: 2px solid #2c3e50;
+    margin-top: 100px; 
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 0.1em 0.4em;
+    text-align: center;
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    -moz-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    border-color: #16a085;
+    color: #16a085;
+}
+
+/* basic grid, only for this demo */
+
+.align {
+    clear: both;
+    margin: 90px auto 20px;
+    width: 100%;
+    max-width: 1170px;
+    text-align: center;
+}
+
+.align > li {
+    width: 500px;
+    min-height: 300px;
+    display: inline-block;
+    margin: 30px 20px 30px 30px;
+    padding: 0 0 0 60px;
+    vertical-align: top;
+}
+
+.book {
+    position: relative;
+    width: 160px; 
+    height: 220px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+/*
+    2. background & color
+*/
+
+/* HARDCOVER FRONT */
+.hardcover_front li:first-child {
+    background-color: #eee;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* reverse */
+.hardcover_front li:last-child {
+    background: #fffbec;
+}
+
+/* HARDCOVER BACK */
+.hardcover_back li:first-child {
+    background: #fffbec;
+}
+
+/* reverse */
+.hardcover_back li:last-child {
+    background: #fffbec;
+}
+
+.book_spine li:first-child {
+    background: #eee;
+}
+.book_spine li:last-child {
+    background: #333;
+}
+
+/* thickness of cover */
+
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before,
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before,
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before,
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before,
+.book_spine li:first-child:after,
+.book_spine li:first-child:before,
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+    background: #999;
+}
+
+/* page */
+
+.page > li {
+    background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+    background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+    background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+    background: linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1), inset -1px 0px 1px rgba(150, 150, 150, 0.2);
+    border-radius: 0px 5px 5px 0px;
+}
+
+/*
+    3. opening cover, back cover and pages
+*/
+
+.hardcover_front {
+    -webkit-transform: rotateY(-34deg) translateZ(8px);
+    -moz-transform: rotateY(-34deg) translateZ(8px);
+    transform: rotateY(-34deg) translateZ(8px);
+    z-index: 100;
+}
+
+.hardcover_back {
+    -webkit-transform: rotateY(-15deg) translateZ(-8px);
+    -moz-transform: rotateY(-15deg) translateZ(-8px);
+    transform: rotateY(-15deg) translateZ(-8px);
+}
+
+.page li:nth-child(1) {
+    -webkit-transform: rotateY(-28deg);
+    -moz-transform: rotateY(-28deg);
+    transform: rotateY(-28deg);
+}
+
+.page li:nth-child(2) {
+    -webkit-transform: rotateY(-30deg);
+    -moz-transform: rotateY(-30deg);
+    transform: rotateY(-30deg);
+}
+
+.page li:nth-child(3) {
+    -webkit-transform: rotateY(-32deg);
+    -moz-transform: rotateY(-32deg);
+    transform: rotateY(-32deg);
+}
+
+.page li:nth-child(4) {
+    -webkit-transform: rotateY(-34deg);
+    -moz-transform: rotateY(-34deg);
+    transform: rotateY(-34deg);
+}
+
+.page li:nth-child(5) {
+    -webkit-transform: rotateY(-36deg);
+    -moz-transform: rotateY(-36deg);
+    transform: rotateY(-36deg);
+}
+
+/*
+    4. position, transform & transition
+*/
+
+.hardcover_front,
+.hardcover_back,
+.book_spine,
+.hardcover_front li,
+.hardcover_back li,
+.book_spine li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.hardcover_front,
+.hardcover_back {
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+}
+
+.hardcover_front {
+    -webkit-transition: all 0.8s ease, z-index 0.6s;
+    -moz-transition: all 0.8s ease, z-index 0.6s;
+    transition: all 0.8s ease, z-index 0.6s;
+}
+
+/* HARDCOVER front */
+.hardcover_front li:first-child {
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-transform: translateZ(2px);
+    -moz-transform: translateZ(2px);
+    transform: translateZ(2px);
+}
+
+.hardcover_front li:last-child {
+    -webkit-transform: rotateY(180deg) translateZ(2px);
+    -moz-transform: rotateY(180deg) translateZ(2px);
+    transform: rotateY(180deg) translateZ(2px);
+}
+
+/* HARDCOVER back */
+.hardcover_back li:first-child {
+    -webkit-transform: translateZ(2px);
+    -moz-transform: translateZ(2px);
+    transform: translateZ(2px);
+}
+
+.hardcover_back li:last-child {
+    -webkit-transform: translateZ(-2px);
+    -moz-transform: translateZ(-2px);
+    transform: translateZ(-2px);
+}
+
+/* thickness of cover */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before,
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before,
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before,
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before,
+.book_spine li:first-child:after,
+.book_spine li:first-child:before,
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* HARDCOVER front */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before {
+    width: 4px;
+    height: 100%;
+}
+
+.hardcover_front li:first-child:after {
+    -webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+    -moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+    transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.hardcover_front li:first-child:before {
+    -webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+    -moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+    transform: rotateY(90deg) translateZ(158px) translateX(2px);
+}
+
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before {
+    width: 4px;
+    height: 160px;
+}
+
+.hardcover_front li:last-child:after {
+    -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+}
+.hardcover_front li:last-child:before {
+    box-shadow: 0px 0px 30px 5px #333;
+    -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+}
+
+/* thickness of cover */
+
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before {
+    width: 4px;
+    height: 100%;
+}
+
+.hardcover_back li:first-child:after {
+    -webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+    -moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+    transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+.hardcover_back li:first-child:before {
+    -webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+    -moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+    transform: rotateY(90deg) translateZ(158px) translateX(2px);
+}
+
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before {
+    width: 4px;
+    height: 160px;
+}
+
+.hardcover_back li:last-child:after {
+    -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+}
+
+.hardcover_back li:last-child:before {
+    box-shadow: 10px -1px 80px 20px #666;
+    -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+}
+
+/* BOOK SPINE */
+.book_spine {
+    -webkit-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+    -moz-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+    transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+    width: 16px;
+    z-index: 0;
+}
+
+.book_spine li:first-child {
+    -webkit-transform: translateZ(2px);
+    -moz-transform: translateZ(2px);
+    transform: translateZ(2px);
+}
+
+.book_spine li:last-child {
+    -webkit-transform: translateZ(-2px);
+    -moz-transform: translateZ(-2px);
+    transform: translateZ(-2px);
+}
+
+/* thickness of book spine */
+.book_spine li:first-child:after,
+.book_spine li:first-child:before {
+    width: 4px;
+    height: 100%;
+}
+
+.book_spine li:first-child:after {
+    -webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+    -moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+    transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.book_spine li:first-child:before {
+    -webkit-transform: rotateY(-90deg) translateZ(-12px);
+    -moz-transform: rotateY(-90deg) translateZ(-12px);
+    transform: rotateY(-90deg) translateZ(-12px);
+}
+
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+    width: 4px;
+    height: 16px;
+}
+
+.book_spine li:last-child:after {
+    -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+}
+
+.book_spine li:last-child:before {
+    box-shadow: 5px -1px 100px 40px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+    -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+    transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+}
+
+.page,
+.page > li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.page {
+    width: 100%;
+    height: 98%;
+    top: 1%;
+    left: 3%;
+    z-index: 10;
+}
+
+.page > li {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transition-property: transform;
+    -moz-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.page > li:nth-child(1) {
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.page > li:nth-child(2) {
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.page > li:nth-child(3) {
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.page > li:nth-child(4) {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.page > li:nth-child(5) {
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+/*
+    5. events
+*/
+
+.book:hover > .hardcover_front {
+    -webkit-transform: rotateY(-145deg) translateZ(0);
+    -moz-transform: rotateY(-145deg) translateZ(0);
+    transform: rotateY(-145deg) translateZ(0);
+    z-index: 0;
+}
+
+.book:hover > .page li:nth-child(1) {
+    -webkit-transform: rotateY(-30deg);
+    -moz-transform: rotateY(-30deg);
+    transform: rotateY(-30deg);
+    -webkit-transition-duration: 1.5s;
+    -moz-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+}
+
+.book:hover > .page li:nth-child(2) {
+    -webkit-transform: rotateY(-35deg);
+    -moz-transform: rotateY(-35deg);
+    transform: rotateY(-35deg);
+    -webkit-transition-duration: 1.8s;
+    -moz-transition-duration: 1.8s;
+    transition-duration: 1.8s;
+}
+
+.book:hover > .page li:nth-child(3) {
+    -webkit-transform: rotateY(-118deg);
+    -moz-transform: rotateY(-118deg);
+    transform: rotateY(-118deg);
+    -webkit-transition-duration: 1.6s;
+    -moz-transition-duration: 1.6s;
+    transition-duration: 1.6s;
+}
+
+.book:hover > .page li:nth-child(4) {
+    -webkit-transform: rotateY(-130deg);
+    -moz-transform: rotateY(-130deg);
+    transform: rotateY(-130deg);
+    -webkit-transition-duration: 1.4s;
+    -moz-transition-duration: 1.4s;
+    transition-duration: 1.4s;
+}
+
+.book:hover > .page li:nth-child(5) {
+    -webkit-transform: rotateY(-140deg);
+    -moz-transform: rotateY(-140deg);
+    transform: rotateY(-140deg);
+    -webkit-transition-duration: 1.2s;
+    -moz-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+}
+
+/*
+    6. Bonus
+*/
+
+/* cover CSS */
+
+.coverDesign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.coverDesign::after {
+    background-image: -webkit-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+    background-image: -moz-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+    background-image: linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.coverDesign h1 {
+    color: #fff;
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 54% 0 0 0;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
+}
+
+.coverDesign p {
+    color: #f8f8f8;
+    font-size: 1em;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
+}
+
+.yellow {
+    background-color: #f1c40f;
+    background-image: -webkit-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
+    background-image: -moz-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
+    background-image: linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
+}
+
+.blue {
+    background-color: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db 58%, #2a90d4 0%);
+    background-image: -moz-linear-gradient(top, #3498db 58%, #2a90d4 0%);
+    background-image: linear-gradient(top, #3498db 58%, #2a90d4 0%);
+}
+
+.grey {
+    background-color: #f8e9d1;
+    background-image: -webkit-linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
+    background-image: -moz-linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
+    background-image: linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
+}
+
+/* Basic ribbon */
+
+.ribbon {
+    color: #fff;
+    display: block;
+    font-size: 0.7em;
+    position: absolute;
+    top: 11px;
+    right: 1px;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    letter-spacing: 0.15em; 
+    text-align: center;
+    -webkit-transform: rotateZ(45deg) translateZ(1px);
+    -moz-transform: rotateZ(45deg) translateZ(1px);
+    transform: rotateZ(45deg) translateZ(1px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 10;
+  &.new{
+    background: #63c930;
+    &:before,
+    &:after{
+      border-bottom: 20px solid #63c930;
+    }
+  }
+  &.bestseller{
+    background: #c0392b;
+    &:before,
+    &:after{
+      border-bottom: 20px solid #c0392b;
+    }
+  }
+  
+    
+}
+
+.ribbon::before,
+.ribbon::after{
+    position: absolute;
+    top: -20px;
+    width: 0;
+    height: 0;
+    
+    border-top: 20px solid transparent;
+}
+
+.ribbon::before{
+    left: -20px;
+    border-left: 20px solid transparent;
+}
+
+.ribbon::after{
+    right: -20px;
+    border-right: 20px solid transparent;
+}
+
+/* figcaption */
+
+figcaption {
+    padding-left: 40px;
+    text-align: left;
+    position: absolute;
+    top: 0%;
+    left: 160px;
+    width: 310px;
+}
+
+figcaption h1 {
+    margin: 0;
+}
+
+figcaption span {
+    color: #16a085;
+    padding: 0.6em 0 1em 0;
+    display: block;
+}
+
+figcaption p {
+    color: #63707d;
+    line-height: 1.3;
+}
+
+/* Media Queries */
+@media screen and (max-width: 37.8125em) {
+    .align > li {
+        width: 100%;
+        min-height: 440px;
+        height: auto;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+    .book {
+        margin: 0 auto;
+    }
+
+    figcaption {
+        text-align: center;
+        width: 320px;
+        top: 250px;
+        padding-left: 0;
+        left: -80px;
+        font-size: 90%;
+    }
+}
+    </style>
+
+    
+	   <body class="is-preload">
+           <div id="overlay"><span class="spinner"></span></div>
+
+           <!-- Header -->
+           <header id="header">
+               <a class="logo" href="/home" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com</a>
+               <nav>
+                   <a href="#menu" style="font-size: 18px">Menu</a>
+               </nav>
+           </header>
+
+        
+        
+           <!-- Nav -->
+           {% include "navbar.html" %}
+
+        
+        
+           <!-- Heading -->
+           <div id="heading" >
+               <h1 style="font-family: serif" class="icon fa-book"> PDF Books All Classes</h1>
+           </div>
+
+        
+        
+           <!-- Main -->
+           <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 style="text-align: center">10th Class Text Books</h1>
+                <hr>
+                <div class="component" >
+                    <ul class="align">
+                        <!-- Book 1 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-phy-book-cover.jpg" alt="10th Class Physics Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Physics%2010.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Physics%2010.pdf"><h2>10th Class Physics Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Physics%2010.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Physics Book available to download or read online. E-book is in PDF format.</p>
+                                </figcaption>
+                            </figure>
+                        </li>  
+                        
+                        
+                        <!-- Book 2 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-phy-book-coveru.jpg" alt="10th Class Physics Urdu Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/2018-G10-Physics-UM.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/2018-G10-Physics-UM.pdf"><h2>10th Class Physics Urdu Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/2018-G10-Physics-UM.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Physics Urdu Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li> 
+                        
+                        
+                        <!-- Book 3 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-comp-book-cover.jpg" alt="10th Class Computer Science Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Computer%20Science%2010th%20Final%20EM.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Computer%20Science%2010th%20Final%20EM.pdf"><h2>10th Comp. Science Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Computer%20Science%2010th%20Final%20EM.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Computer Science Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 4 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-comp-book-coveru.jpg" alt="10th Class Computer Science Urdu Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a target="_blank" class="btn" href="https://pctb.punjab.gov.pk/system/files/Computer%20Science%2010th%20Final%20UM.pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Computer%20Science%2010th%20Final%20UM.pdf"><h2>10th Comp. Science Urdu Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Computer%20Science%2010th%20Final%20UM.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Computer Science Urdu Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 5 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-urdu-book-cover.png" alt="10th Class Urdu Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a target="_blank" class="btn" href="https://pctb.punjab.gov.pk/system/files/Urdu10(Compulsary).pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Urdu10(Compulsary).pdf"><h2>10th Class Urdu Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Urdu10(Compulsary).pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Urdu Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 6 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-islamyat-book-cover.png" alt="10th Class Islamiat Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Islamiat%20Lazmi%209-10.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Islamiat%20Lazmi%209-10.pdf"><h2>10th Class Islamiat Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Islamiat%20Lazmi%209-10.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Islamiyat Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 7 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-bio-book-cover.png" alt="10th Class Biology Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Biology%2010_0.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Biology%2010_0.pdf"><h2>10th Class Biology Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Biology%2010_0.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Biology Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 8 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-bio-book-coveru.jpg" alt="10th Class Biology Urdu Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/2018-G10-Bio-UM.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/2018-G10-Bio-UM.pdf"><h2>10th Class Biology Urdu Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/2018-G10-Bio-UM.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Biology Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 9 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-textile-book-coveru.jpg" alt="10th Class Textile and Clothing Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a target="_blank" class="btn" href="https://pctb.punjab.gov.pk/system/files/Parcha%20Bafi%20(Textile%20and%20clothing)%2010.pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Parcha%20Bafi%20(Textile%20and%20clothing)%2010.pdf"><h2>10th Textile and Clothing Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Parcha%20Bafi%20(Textile%20and%20clothing)%2010.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Textile and Clothing Text Book available to download or read online.</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 10 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-food-book-coveru.jpg" alt="10th Class Food and Nutrition Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Ghiza%20aur%20ghizaiyat%2010.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Ghiza%20aur%20ghizaiyat%2010.pdf"><h2>10th Food and Nutrition Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Ghiza%20aur%20ghizaiyat%2010.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Food and Nutrition Book available to download or read online.</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 11 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-math-book-cover.png" alt="10th Class Maths Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Math%2010%20E.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Math%2010%20E.pdf"><h2>10th Class Maths Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Math%2010%20E.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Maths Text Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 12 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-math-book-coveru.jpg" alt="10th Class Maths Urdu Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Math10(Sc)UM.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Math10(Sc)UM.pdf"><h2>10th Class Maths Urdu Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Math10(Sc)UM.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Maths Urdu Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 13 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-english-book-cover.png" alt="10th Class English Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/English%20X_0.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/English%20X_0.pdf"><h2>10th Class English Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/English%20X_0.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class English Text Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 14 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-he-book-cover.jpg" alt="10th Class Home Economics Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" href="https://pctb.punjab.gov.pk/system/files/Home%20Economics%2010.pdf" target="_blank">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Home%20Economics%2010.pdf"><h2>10th Class Home Economics <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Home%20Economics%2010.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Home Economics Text Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 15 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-compprac-book-cover.jpg" alt="10th Class Computer Practical Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                    
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" target="_blank" href="https://pctb.punjab.gov.pk/system/files/PNB%20computer_10EM_0.pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/PNB%20computer_10EM_0.pdf"><h2>10th Computer Practical Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/PNB%20computer_10EM_0.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Computer Practical Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 16 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-compprac-book-coveru.jpg" alt="10th Class Urdu Computer Practical Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                    
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" target="_blank" href="https://pctb.punjab.gov.pk/system/files/PNB%20Computer_10UM_0.pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/PNB%20Computer_10UM_0.pdf"><h2>10th Computer Practical Urdu <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/PNB%20Computer_10UM_0.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Urdu Computer Practical Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 17 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-chemistry-book-cover.png" alt="10th Class Chemistry Text Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                    
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" target="_blank" href="https://pctb.punjab.gov.pk/system/files/Chemistry%2010.pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/Chemistry%2010.pdf"><h2>10th Class Chemistry Text Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/Chemistry%2010.pdf"></a></h2></a>
+                                    <span>English Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Chemistry Text Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                        
+                        <!-- Book 18 -->
+                        <li>
+                            <figure class='book'>        
+                                <!-- Front -->        
+                                <ul class='hardcover_front'>
+                                    <li>
+                                        <img src="/static/images/books/10/10th-pakstudies-book-cover.png" alt="10th Class Pakistan Studies Book" width="100%" height="100%">
+                                    </li>
+                                    <li></li>
+                                    
+                                </ul>        
+                                <!-- Pages -->        
+                                <ul class='page'>
+                                    <li></li>
+                                    <li>
+                                        <a class="btn" target="_blank" href="https://pctb.punjab.gov.pk/system/files/PTB%20Aloom%2010%20um%20complte%20file.pdf">Download</a>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>        
+                                <!-- Back -->        
+                                <ul class='hardcover_back'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class='book_spine'>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <figcaption>
+                                    <a target="_blank" href="https://pctb.punjab.gov.pk/system/files/PTB%20Aloom%2010%20um%20complte%20file.pdf"><h2>10th Class Pakistan Studies Book <a target="_blank" style="color: darkred" class="icon fa-download" href="https://pctb.punjab.gov.pk/system/files/PTB%20Aloom%2010%20um%20complte%20file.pdf"></a></h2></a>
+                                    <span>Urdu Medium</span>
+                                    <p>Punjab Text Book Board 10th Class Urdu Computer Practical Book available to download or read online. E-book is in PDF format</p>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        
+                    </ul>  
+                </div>
+                <hr>
+                
+               </div>
+               <div class="inner">
+                   <div class="content">
+                       <p>If you are looking for <b>Punjab textbook board 10th class books</b> Urdu Medium and English Medium then you are at the right place. Here you can find the <b>10th class textbooks</b> from Punjab Textbook Board. You can read it online or you can download it for later. <b>10th Class Text Books</b> English and Urdu Medium of all chapters have been announced by PakResult.com, As we are already helping students over Pakistan by providing them with <u><a href="https://www.pakresult.com/preperation/matric-inter" style="color: darkred">9th and 10th class notes</a></u>, <u><a href="https://www.pakresult.com/boardresult/" style="color: darkred">Board Results</a></u>, <u><a href="https://www.pakresult.com/datesheets/" style="color: darkred">Date sheets</a></u> and<u><a href="https://www.pakresult.com/pairing/" style="color: darkred"> Pairing schemes.</a></u>
+                       </p> Please also check out other 9th class textbooks and 10th class textbooks by <b>PakResult.com</b>. 10th class students are searching online for 10th class books to prepare for exams smartly.<br><br>
+
+                       Punjab Curriculum and Textbook Board has taken a commendable initiative of providing students with Online Free Ebooks for all classes. PCTB has also launched its online portal where it provides with Guidelines for Textbook Development, E-books, Supplementary Reading Material, Publisher's Registration and Curriculum. PCTB has E-books for all classes including <b>10th class books</b> and <b>10th class books</b> in the form of PDF.<br><br>
+                       <br><br>
+                       <p>The students who want to achieve excellent success in exams should prepare for exams according to the 10th class pairing schemes. Pairing scheme gives you a format and idea of the paper. If you are serious about your 10th class exam then I would suggest you find out all the questions according to the respective pairing schemes. You should find some of the most important questions in your 10th class books and then write them on paper.<br><br></p>
+
+                       <p>After that, you should prepare them by understanding the concept which is the goal of study. Most of the students started cramming the books word by word to get   higher marks, which is extremely unhealthy for their mind and career. You cannot learn something by cramming it. So I would suggest you understand the things by listening to the lectures carefully in the classroom. You can also get help from youtube videos.<br><br>
+                       </p>
+                       <p>
+                           There is a list of <b>10th Class TextBooks</b> given above. You can view more details about any book by clicking on its link. You can read the books online or you can download them for later use. These <b>10th Class Books</b> are from PCTB and we don't have rights to reproduce a copy of this book, therefore, we will redirect you to   the official website of Punjab Curriculum and Textbook Board Authority. We are not responsible for any omission in this regard.
+                       </p>
+
+                        
+                   </div>
+               </div>
+           </section>
+        
+           <!-- Footer -->
+           {% include "footer.html" %}
+
+           <!-- Scripts -->
+           <script src="{% static "js/jquery.min.js" %}"></script>
+           <script src="{% static "js/browser.min.js" %}"></script>
+           <script src="{% static "js/breakpoints.min.js" %}"></script>
+           <script src="{% static "js/util.js" %}"></script>
+           <script src="{% static "js/main.js" %}"></script>
+
+	   </body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+ 
+        
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>

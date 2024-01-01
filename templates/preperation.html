@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+        <link rel="icon" href="{% static '/images/edupak/icon3.png' %}" style="width: 50%">
+		<title style="font-family:sans-serif">Notes, Books & Entry Test Preperation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/custom-written.css' %}" />
+	</head>
+
+
+    
+    
+
+<body class="is-preload">
+
+	<!-- Header -->
+		<header id="header">
+               <a class="logo" href="/home" style="font-family: Times New Roman, Times, serif; font-size: 22px">Pak Result.com</a>
+
+			<nav>
+				<a href="#menu" style="font-size: 18px">Menu</a>
+			</nav>
+		</header>
+
+	<!-- Nav -->
+        {% include "navbar.html" %}
+
+	<!-- Banner -->
+		<div id="heading" >
+				<h1 class="icon fa-book" style="font-family: serif"> Notes And Books</h1>
+			</div>
+
+	<!-- Highlights -->
+		<section class="wrapper">
+            <div class="inner">
+                <header class="special"><hr>
+                    <h1>Notes, Books & Entry Test Preperation</h1>
+                </header>
+
+
+                <div class="highlights" style="background-color: #f8f8f8">
+					<section>
+						<div class="content">
+							<header>
+								<a href="matric-inter" class="icon fa-file-text-o"><span class="label">Icon</span></a>
+								<a href="matric-inter"><h3><b>Matric & Inter Notes</b></h3></a>
+                            </header>
+							<p>Matric And Intermediate Chapter Wise Notes For All Subjects and Boards</p>
+                        </div>
+					</section>
+                    
+
+					<section>
+						<div class="content">
+							<header>
+								<a href="entrytest" class="icon fa-line-chart"><span class="label">Icon</span></a>
+								<a href="entrytest"><h3><b>Entry Test Prep</b></h3></a>
+							</header>
+							<p>Entry Test Notes and Guides for All Universities! Best Preperatory Resources</p>
+						</div>
+					</section>
+
+					<section>
+						<div class="content">
+							<header>
+								<a href="book-pdf" class="icon fa-book"><span class="label">Icon</span></a>
+								<a href="book-pdf"><h3><b>Book PDFs</b></h3></a>
+							</header>
+							<p> All Subject Books Pdfs Available For Free Downlaod for 5th, 8th, Matric, Inter and All Classes</p>
+						</div>
+					</section>
+				</div><hr>
+                
+                    <div style="text-align: center">
+                        <p><b>Education Notes for Sindh Board, Punjab Board, KPK Board, Balochistan Board English, Math, Urdu, Sindhi, Islamiat Chemistry, Physics, Computer Science. PakResult.com provides education notes of every class 9th class notes, 10th class notes, 11th class notes, 12th class notes (Chapterwise of All Subjects)<br>All Entry Test Preperation Notes Available. MDCAT, NET, ECAT Notes Download Now!</b> </p>
+                    </div>
+			</div>
+		</section>
+
+
+
+	<!-- Footer -->
+    {% include "footer.html" %}
+	<!-- Scripts -->
+
+
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/browser.min.js" %}"></script>
+		<script src="{% static "js/breakpoints.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+
+</body>
+    
+    
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+</html>
