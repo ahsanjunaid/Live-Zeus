@@ -1,5 +1,5 @@
 # Live-Zeus
-Web Application made in Django, HTML, CSS, JS along with multiple Pdf's added along for Notes, focusing towards helping and guiding students ranging from grade 9th to 12th
+Extensive Web Application of 82 Webpages made in Django, HTML, CSS, JS along with multiple Pdf's added along for Notes, focusing towards helping and guiding students ranging from grade 9th to 12th
 Has various features included:
 
 ----------------------------------------------------------
